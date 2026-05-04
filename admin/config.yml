@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main # or master, depending on your default branch
+
+# Where images go when you upload them
+media_folder: "images/uploads"
+# The path your website uses to find those images
+public_folder: "/images/uploads"
+
+collections:
+  - name: "safari_list"
+    label: "Safari Management"
+    # We use 'file' because we are editing one specific JSON file
+    files:
+      - label: "All Safari Packages"
+        name: "packages"
+        file: "data/safaris.json"
+        fields:
+          - label: "Safaris"
+            name: "safaris"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Duration (e.g. 3 Days)", name: "duration", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Price", name: "price", widget: "string"}
+              - {label: "Featured Image", name: "image", widget: "image"}

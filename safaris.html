@@ -37,9 +37,13 @@
                 grid.innerHTML = ''; // Clear the loading text
 
                 data.forEach(item => {
+                    // This check ensures both Unsplash links and uploaded CMS images work
+                    const imageUrl = item.image.startsWith('http') ? item.image : `./${item.image}`;
+                    
                     grid.innerHTML += `
                         <div class="card">
-                            <div class="card-img" style="background-image: url('${item.image}')"></div>
+                            <!-- Use the imageUrl variable here! -->
+                            <div class="card-img" style="background-image: url('${imageUrl}')"></div>
                             <div class="card-body">
                                 <span class="tag">${item.duration}</span>
                                 <h3>${item.title}</h3>
