@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari Packages | Uganda Peak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">UGANDA <span>PEAK</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="safaris.html">Our Safaris</a></li>
+        </ul>
+    </nav>
+
+    <section class="safari-header">
+        <h1>Our Safari Packages</h1>
+        <p>Pick your next great adventure</p>
+    </section>
+
+    <section class="container">
+        <div class="safari-grid" id="safari-grid">
+            <!-- JavaScript will inject cards here -->
+             <p>Loading adventures...</p>
+        </div>
+    </section>
+
+    <script>
+        async function fetchSafaris() {
+            try {
+                const response = await fetch('./data/safaris.json');
+                const data = await response.json();
+                const grid = document.getElementById('safari-grid');
+                
+                grid.innerHTML = ''; // Clear the loading text
+
+                data.forEach(item => {
+                    grid.innerHTML += `
+                        <div class="card">
+                            <div class="card-img" style="background-image: url('${item.image}')"></div>
+                            <div class="card-body">
+                                <span class="tag">${item.duration}</span>
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
+                                <div class="card-footer">
+                                    <span class="price">${item.price}</span>
+                                    <a href="#" class="btn-sm">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            } catch (error) {
+                console.error("Error loading safaris:", error);
+            }
+        }
+        fetchSafaris();
+    </script>
+</body>
+</html>
