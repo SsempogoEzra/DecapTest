@@ -6,3 +6,4 @@ learn points;
 * yml file
 *  github actions
 *  netfliy identify
+* CI/CD
