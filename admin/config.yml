@@ -1,16 +1,14 @@
 backend:
   name: git-gateway
-  branch: main # or master, depending on your default branch
+  repo: https://github.com/SsempogoEzra/DecapTest/ # <-- Double check this is correct!
+  branch: main # <-- If your GitHub says 'master', change this to master
 
-# Where images go when you upload them
 media_folder: "images/uploads"
-# The path your website uses to find those images
 public_folder: "/images/uploads"
 
 collections:
   - name: "safari_list"
     label: "Safari Management"
-    # We use 'file' because we are editing one specific JSON file
     files:
       - label: "All Safari Packages"
         name: "packages"
@@ -21,7 +19,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Duration (e.g. 3 Days)", name: "duration", widget: "string"}
+              - {label: "Duration", name: "duration", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Price", name: "price", widget: "string"}
               - {label: "Featured Image", name: "image", widget: "image"}
