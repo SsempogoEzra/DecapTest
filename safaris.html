@@ -34,15 +34,16 @@
                 const data = await response.json();
                 const grid = document.getElementById('safari-grid');
                 
-                grid.innerHTML = ''; // Clear the loading text
-
-                data.forEach(item => {
-                    // This check ensures both Unsplash links and uploaded CMS images work
+                grid.innerHTML = ''; 
+            
+                // Extract array from data.safaris
+                const packages = data.safaris || [];
+            
+                packages.forEach(item => {
                     const imageUrl = item.image.startsWith('http') ? item.image : `./${item.image}`;
                     
                     grid.innerHTML += `
                         <div class="card">
-                            <!-- Use the imageUrl variable here! -->
                             <div class="card-img" style="background-image: url('${imageUrl}')"></div>
                             <div class="card-body">
                                 <span class="tag">${item.duration}</span>

@@ -1,23 +1,24 @@
-[
-    {
-        "title": "Bwindi Gorilla Trek",
-        "duration": "3 Days",
-        "description": "Get up close with the gentle giants in the dense mist of Bwindi Impenetrable Forest.",
-        "price": "$1,500",
-        "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1000"
-    },
-    {
-        "title": "Queen Elizabeth Safari",
-        "duration": "5 Days",
-        "description": "Home to the famous tree-climbing lions and the Kazinga Channel boat cruise.",
-        "price": "$2,200",
-        "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1000"
-    },
-    {
-        "title": "Murchison Falls Adventure",
-        "duration": "4 Days",
-        "description": "Witness the world's most powerful waterfall and track rhinos on foot.",
-        "price": "$1,850",
-        "image": "https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=1000"
-    }
-]
+{"safaris":[
+        {
+            "title": "Bwindi Gorilla Trek",
+            "duration": "3 Days",
+            "description": "Get up close with the gentle giants in the dense mist of Bwindi Impenetrable Forest.",
+            "price": "$1,500",
+            "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1000"
+        },
+        {
+            "title": "Queen Elizabeth Safari",
+            "duration": "5 Days",
+            "description": "Home to the famous tree-climbing lions and the Kazinga Channel boat cruise.",
+            "price": "$2,200",
+            "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1000"
+        },
+        {
+            "title": "Murchison Falls Adventure",
+            "duration": "4 Days",
+            "description": "Witness the world's most powerful waterfall and track rhinos on foot.",
+            "price": "$1,850",
+            "image": "https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=1000"
+        }
+    ]
+}

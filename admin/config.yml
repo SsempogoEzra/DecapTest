@@ -1,11 +1,12 @@
 backend:
   name: git-gateway
-  repo: https://github.com/SsempogoEzra/DecapTest/ # <-- Double check this is correct!
+  #repo: https://github.com/SsempogoEzra/DecapTest/ # <-- Double check this is correct!
   branch: main # <-- If your GitHub says 'master', change this to master
 
-media_folder: "images/uploads"
+media_folder: "./images/uploads"
 public_folder: "/images/uploads"
 
+collections:
 collections:
   - name: "safari_list"
     label: "Safari Management"
@@ -22,4 +23,4 @@ collections:
               - {label: "Duration", name: "duration", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Price", name: "price", widget: "string"}
-              - {label: "Featured Image", name: "image", widget: "image"}
+              - {label: "Featured Image", name: "image", widget: "image"}}
