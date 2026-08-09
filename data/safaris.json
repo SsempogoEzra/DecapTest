@@ -20,6 +20,13 @@
       "description": "Witness the world's most powerful waterfall and track rhinos on foot.",
       "price": "$1,850",
       "image": "https://images.unsplash.com/photo-1523805009345-7448845a9e53?q=80&w=1000"
+    },
+    {
+      "title": "Test Safari",
+      "duration": "infinity",
+      "description": "Get to live in the heart of the jungle like Tarzan up-close and personal with the silver backs and in year 2 relocate to Queen Elizabeth NP for Lion back rides and bare hand ghazel hunting   ",
+      "price": "$150,0000",
+      "image": "images/uploads/unnamed-1-.webp"
     }
   ]
 }
